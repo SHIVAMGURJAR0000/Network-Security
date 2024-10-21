@@ -4,38 +4,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        section {
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid #ccc; /* Border around sections */
+    border-radius: 5px; /* Rounded corners */
+}
+
+h1, h2 {
+    color: #2c3e50; /* Header color */
+}
+
+p {
+    font-size: 20px; /* Paragraph font size */
+    line-height: 1.5; /* Line height for readability */
+}
+
+.btn {
+    display: inline-block; /* Button styling */
+    padding: 10px 20px;
+    background-color: #2980b9; /* Button background color */
+    color: #fff; /* Button text color */
+    text-decoration: none; /* No underline */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.btn:hover {
+    background-color: #3498db; /* Change background on hover */
+}
+
+    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="sidebar" id="sidebar">
+        <div class = 'text'><h1>DASHBOARD</h1></div>
+        <div class="sidebar-item">
+            <a href="/home"><i class="icon">🏠</i><span class="item-text">Home</span></a>
+        </div>
+        <div class="sidebar-item">
+            <a href="/files"><i class="icon">📁</i><span class="item-text">Files</span></a>
+        </div> <div class="sidebar-item">
+          <a href="/about"><i class="new">ℹ️</i><span class="item-text">About</span></a>
+      </div>
+        <div class="sidebar-item">
+            <a href="/settings"><i class="icon">⚙️</i><span class="item-text">Settings</span></a>
+        </div>
+       
+      </div>
+      <div class="main-content">
     <p>
-        1. Introduction:
-Start with a brief introduction about yourself, your team (if applicable), and the website's mission.
-Example:
+        <section id="introduction">
+            <h1>Welcome to file intgrity monitoring system!</h1>
+            <p>We are dedicated to helping individuals and businesses enhance their digital presence and security. Whether you're looking for cutting-edge technology solutions or practical advice on cybersecurity, you're in the right place.</p>
+        </section>
+        
+        <section id="what-you-offer">
+            <h2>What We Offer</h2>
+            <p>At [Your Website Name], we specialize in full-stack development, building robust mobile applications, and ensuring network security with state-of-the-art solutions like file integrity monitoring, encryption, and real-time protection.</p>
+        </section>
+        
+        <section id="unique-value">
+            <h2>Your Unique Value</h2>
+            <p>What sets us apart is our commitment to security-first development. We integrate best practices such as encryption, file integrity monitoring, and proactive threat detection into every project we take on. Our approach is built around the principles of reliability, innovation, and user-centric design.</p>
+        </section>
+        
+        <section id="vision-mission">
+            <h2>Your Vision/Mission</h2>
+            <p>Our mission is to provide secure and scalable solutions that empower businesses and individuals to thrive in the digital age. We are passionate about building technologies that not only solve today’s challenges but are also future-proof.</p>
+        </section>
+        
+        <section id="call-to-action">
+            <h2>Get Involved</h2>
+            <p>Explore our services, read our latest blog posts, or get in touch to see how we can help you secure your digital presence and achieve your technology goals.</p>
+            <a href="#contact" class="btn">Contact Us</a>
+        </section>
+        
+       
+    </p></div>
 
-"Welcome to [Your Website Name]! We are dedicated to helping individuals and businesses enhance their digital presence and security. Whether you're looking for cutting-edge technology solutions or practical advice on cybersecurity, you're in the right place."
-
-2. What You Offer:
-Clearly explain what services or information you provide. Highlight your areas of expertise, whether it’s full-stack development, mobile app creation, network security, or something else.
-Example:
-
-"At [Your Website Name], we specialize in full-stack development, building robust mobile applications, and ensuring network security with state-of-the-art solutions like file integrity monitoring, encryption, and real-time protection."
-
-3. Your Unique Value:
-What makes your website different? Mention any specific tools, methodologies, or principles you follow, and what sets you apart from competitors.
-Example:
-
-"What sets us apart is our commitment to security-first development. We integrate best practices such as encryption, file integrity monitoring, and proactive threat detection into every project we take on. Our approach is built around the principles of reliability, innovation, and user-centric design."
-
-4. Your Vision/Mission:
-Share the core mission or vision of your website to show your audience what drives you.
-Example:
-
-"Our mission is to provide secure and scalable solutions that empower businesses and individuals to thrive in the digital age. We are passionate about building technologies that not only solve today’s challenges but are also future-proof."
-
-5. Call to Action:
-Invite visitors to connect, learn more, or engage with your website.
-Example:
-
-"Explore our services, read our latest blog posts, or get in touch to see how we can help you secure your digital presence and achieve your technology goals."
-    </p>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

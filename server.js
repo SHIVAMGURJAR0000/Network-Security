@@ -105,14 +105,14 @@ app.get('/about', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'views/about.html'));
   });
   
-// Function to generate SHA-256 hash of a file
+// Function to generate SHA-256 hash of a file 
 const generateFileHash = (filePath) => {
   const fileBuffer = fs.readFileSync(filePath);
   const hash = crypto.createHash('sha256').update(fileBuffer).digest('hex');
   return hash;
 };
 
-// Save file and store hash
+
 app.post('/upload', upload.single('file'), (req, res) => {
   if (!req.file) {
     return res.status(400).send('No file uploaded.');
@@ -122,17 +122,17 @@ app.post('/upload', upload.single('file'), (req, res) => {
   const filePath = req.file.path;
   const fileHash = generateFileHash(filePath);
 
-  // Store the filename and hash in a hash file for FIM (can also use a database)
+  // Store the filename and hash in a hash file for FIM (can also use a database)  we will use Db we yesterday we have created user model to store database 
   const hashFilePath = 'file_hashes.json';
   let fileHashes = {};
 
   // Read existing hashes if the file exists
-  if (fs.existsSync(hashFilePath)) {
+  if (fs.existsSync(hashFilePath)) {   // asynchronous 
     const rawData = fs.readFileSync(hashFilePath);
     fileHashes = JSON.parse(rawData);
   }
 
-  // Prevent re-upload of the same file
+  // Prevent re-upload of the same file  
   if (fileHashes[req.file.originalname] && fileHashes[req.file.originalname] === fileHash) {
     return res.status(400).send('File with identical content already uploaded.');
   }
@@ -186,7 +186,7 @@ setInterval(() => {
         const currentHash = generateFileHash(filePath);
         if (currentHash !== fileHashes[fileName]) {
           console.error(`ALERT: File integrity compromised for ${fileName}`);
-          // Additional action like sending alert, email, etc., can be added here
+          // additionl add after authentication do it tommorroewwwwwwwwwwwwwwwwwwwwwww
         } else {
           console.log(`${fileName} is intact.`);
         }
